@@ -1,9 +1,2 @@
-# Pinb.
+cool pinball game ja i forced claude to do commits for me :)
 
-A game by Lucas, made for Hack Club's Coral YSWS.
-
-## Status
-Just started.
-
-## How to play
-TBD
