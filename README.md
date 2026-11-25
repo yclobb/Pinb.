@@ -1,4 +1,4 @@
-# Pinb
+# Pinb.
 
 A game by Lucas, made for Hack Club's Coral YSWS.
 
