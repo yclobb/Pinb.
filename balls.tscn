@@ -2,10 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://cfs4gyekot5wv" path="res://art/pinball.png" id="1_ball"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qgpgm"]
+rough = true
+bounce = 0.49
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_mdtge"]
 radius = 14.4
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=160684108]
+physics_material_override = SubResource("PhysicsMaterial_qgpgm")
+continuous_cd = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=740287902]
 shape = SubResource("CircleShape2D_mdtge")

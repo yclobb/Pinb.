@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/flipper.gd" id="1_62qx3"]
+[ext_resource type="Texture2D" path="res://art/parts/flipper.png" id="2_mhtlv"]
+
+[node name="Flipper" type="AnimatableBody2D" unique_id=1952625933]
+script = ExtResource("1_62qx3")
+
+[node name="Art" type="Sprite2D" parent="." unique_id=778529367]
+texture = ExtResource("2_mhtlv")
+
+[node name="Shape" type="CollisionPolygon2D" parent="." unique_id=1292365220]
+polygon = PackedVector2Array(8, -142, -40, -136, -45, -136, -80, -118, -82, -118, -128, -78, -129, -78, -147, -7, -148, -7, -148, 47, -148, 68, -129, 128, -129, 131, -65, 198, -65, 199, 123, 299, 125, 299, 194, 358, 194, 359, 232, 376, 232, 377, 1028, 294, 1037, 294, 1328, 255, 1333, 255, 1397, 227, 1398, 227, 1413, 201, 1414, 201, 1431, 135, 1432, 135, 1430, 84, 1430, 79, 1410, 47, 1410, 45, 1362, 10, 1362, 9, 1300, -5, 1300, -6, 383, -106, 366, -106, 170, -135, 170, -136, 8, -143)
