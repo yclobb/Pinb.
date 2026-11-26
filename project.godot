@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pinb."
-run/main_scene="uid://dovvau8mc6bqx"
+run/main_scene="uid://b15xp6wsm13v3"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
 [editor_plugins]

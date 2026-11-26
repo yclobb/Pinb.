@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://b15xp6wsm13v3"]
+
+[ext_resource type="Texture2D" uid="uid://c6i5y27lwqxx6" path="res://art/dew_gradient.tres" id="1_0fbet"]
+[ext_resource type="Texture2D" uid="uid://blk6g1o10sh6v" path="res://art/title_mask.png" id="2_mask"]
+[ext_resource type="Script" uid="uid://wo706asgkmeb" path="res://scripts/titlegradient.gd" id="3_qtu10"]
+[ext_resource type="Script" uid="uid://c601682fx04kk" path="res://scripts/glow.gd" id="4_iy58a"]
+[ext_resource type="Texture2D" uid="uid://bpin085l4issa" path="res://art/title_outline.png" id="4_outline"]
+[ext_resource type="Texture2D" uid="uid://dpcmvnkjdus3w" path="res://art/title_glow.png" id="5_glow"]
+[ext_resource type="Texture2D" uid="uid://rfuh2htdcav3" path="res://art/title_glow_text.png" id="6_glowtext"]
+
+[sub_resource type="CanvasItemMaterial" id="Mat_add"]
+blend_mode = 1
+
+[node name="Control" type="Control" unique_id=345937948]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1165287874]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=6834232]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=2038636216]
+layout_mode = 2
+
+[node name="Intro" type="Control" parent="." unique_id=390016456]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Intro" unique_id=111974544]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -142.0
+offset_right = 1242.0
+offset_bottom = 807.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[node name="Title" type="TextureRect" parent="Intro" unique_id=1701296739]
+clip_children = 1
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_mask")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="Intro/Title" unique_id=1188853273]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_0fbet")
+expand_mode = 1
+script = ExtResource("3_qtu10")
+
+[node name="Glow" type="Control" parent="Intro" unique_id=804811649]
+anchors_preset = 0
+script = ExtResource("4_iy58a")
+
+[node name="OutlineGlow" type="TextureRect" parent="Intro/Glow" unique_id=1087823314]
+self_modulate = Color(0.49, 1, 0.987, 0.9)
+material = SubResource("Mat_add")
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("5_glow")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="OutlineGlowText" type="TextureRect" parent="Intro/Glow" unique_id=1327092469]
+self_modulate = Color(0.49, 1, 0.987, 0.72)
+material = SubResource("Mat_add")
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("6_glowtext")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Outline" type="TextureRect" parent="Intro/Glow" unique_id=20036843]
+self_modulate = Color(0.92, 1, 0.97, 1)
+material = SubResource("Mat_add")
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("4_outline")
+expand_mode = 1
+stretch_mode = 6
