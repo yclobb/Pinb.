@@ -11,5 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("spawnball"):
 		var ball = spawnball.instantiate()
-		ball.position = Vector2(576, 324)
+		ball.position = Vector2(764, 360)   # right of the chute (Lucas's circle)
 		add_child(ball)	
+		if ball.position < 680:
+			queue_free()

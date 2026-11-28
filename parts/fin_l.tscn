@@ -1,0 +1,12 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://art/parts/fin_l.png" id="1_art"]
+
+[node name="fin_l" type="StaticBody2D" unique_id=1351976312]
+
+[node name="Art" type="Sprite2D" parent="." unique_id=232847736]
+scale = Vector2(0.2650, 0.2650)
+texture = ExtResource("1_art")
+
+[node name="Shape" type="CollisionPolygon2D" parent="." unique_id=1339319143]
+polygon = PackedVector2Array(-20.7, 7.4, -16.4, 12.7, -13.2, 12.7, 20.7, -6.4, 20.7, -11.7, -15.4, -12.7)
